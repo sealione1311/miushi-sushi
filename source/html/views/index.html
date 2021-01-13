@@ -5,24 +5,341 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="description" content="HTML5 webpack boilerplate" />
-    <title>HTML5 webpack boilerplate</title>
+    <title>Доставка суши "Миюши"</title>
     <link rel="stylesheet" href="/vendors/normalize-css/normalize.min.css" />
-    <script>
-      if(!window.HTMLPictureElement) {
-        document.createElement("picture");
-      };
-    </script>
+    <link rel="stylesheet" href="/css/style.min.css"/>   
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
   </head>
   <body>
-    <!--header.html-->
-    <%= _.template(require('../includes/header.html').default)({}) %>
+    <header class="page-header">      
+      <a class="page-header__logo">        
+        <img src="img/miyushi_logo_168.png" width="46" height="46" class="page-header__logo-image">
+      </a>
+      <nav class="user-nav">
+        <button class="user-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <ul class="user-nav__list">
+          <li class="user-nav__item user-nav__item--login">            
+            <a class="" href=""><span class="visually-hidden">Войти в личный кабинет</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#1fba0a" viewBox="0 0 22 22"><circle fill="none" cx="12" cy="7" r="3"/><path d="M12 2C9.243 2 7 4.243 7 7s2.243 5 5 5 5-2.243 5-5S14.757 2 12 2zM12 10c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3S13.654 10 12 10zM21 21v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h2v-1c0-2.757 2.243-5 5-5h4c2.757 0 5 2.243 5 5v1H21z"/></svg>
+              
+            </a>
+          </li>
+          <li class="user-nav__item user-nav__item--cart">
+            <a class="" href=""><span class="visually-hidden">Корзина</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#1fba0a" viewBox="0 0 22 22"><path d="M21.822,7.431C21.635,7.161,21.328,7,21,7H7.333L6.179,4.23C5.867,3.482,5.143,3,4.333,3H2v2h2.333l4.744,11.385 C9.232,16.757,9.596,17,10,17h8c0.417,0,0.79-0.259,0.937-0.648l3-8C22.052,8.044,22.009,7.7,21.822,7.431z M17.307,15h-6.64 l-2.5-6h11.39L17.307,15z"/><circle cx="10.5" cy="19.5" r="1.5"/><circle cx="17.5" cy="19.5" r="1.5"/></svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main>
-      <!--index/hero.html-->
-      <%= _.template(require('../includes/index/hero.html').default)({}) %>
-      <!--index/structure.html-->
-      <%= _.template(require('../includes/index/structure.html').default)({}) %>
+      <section class="special-offers swiper-container">
+        <h3 class="visually-hidden">Специальные предложения</h3>
+        <ul class="special-offers__list swiper-wrapper">
+          <li class="special-offers__item swiper-slide">
+            <p class="special-offers__title">Счастливые часы</p> 
+            <img src="img/special.jpg"   alt="">
+            <p class="special-offers__text">Скидка 15%</p>
+          </li>
+          <li class="special-offers__item swiper-slide">
+            <p class="special-offers__title">Счастливые часы</p> 
+            <img src="img/special.jpg"  alt="">
+            <p class="special-offers__text">Скидка 15%</p>
+          </li>
+          <li class="special-offers__item swiper-slide">
+            <p class="special-offers__title">Счастливые часы</p> 
+            <img src="img/special.jpg"   alt="">
+            <p class="special-offers__text">Скидка 15%</p>
+          </li>
+        </ul>
+        <div class="special-offers__toggles swiper-pagination"></div>            
+      </section>
+      <section class="menu-item swiper-container">
+        
+        <h2 class="menu-item__title">Сеты</h2>
+        <ul class="menu-item__list swiper-wrapper">
+          <li class="menu-item__card swiper-slide slide">            
+            <img src="img/set-5.jpg">
+            <p class="menu-item__name">Минисет №5</p>
+            <p class="menu-item__quantity">24 шт. | 960 г. | 800 Kkal</p>
+            <div class="menu-item__price"><span class="menu-item__total">510 <sup>руб.</sup></span>
+              <p class="menu-item__buttons">
+                <button class="menu-item__price-decrease">-</button>
+                <span class="menu-item__amount">1</span>
+                <button class="menu-item__price-increase">+</button>
+              </p>                            
+            </div>
+            <button class="menu-item__button">В корзину</button>          
+          </li>
+          <li class="menu-item__card swiper-slide">
+            <img src="img/set-10.jpg">
+            <p class="menu-item__name">Сет №10</p>            
+            <p class="menu-item__quantity">72 шт. | 1560 г. | 1700 Kkal</p>
+            <div class="menu-item__price"><span class="menu-item__total">2 050 <sup>руб.</sup> </span>
+              <p class="menu-item__buttons">
+                <button class="menu-item__price-decrease">-</button>
+                <span class="menu-item__amount">1</span>
+                <button class="menu-item__price-increase">+</button>
+              </p>              
+            </div>
+            <button class="menu-item__button">В корзину</button>
+          </li>
+          <li class="menu-item__card swiper-slide">
+            <img src="img/set-2.jpg">
+            <p class="menu-item__name">Сет №2</p>
+            
+            <p class="menu-item__quantity">36 шт. | 1960 г. | 1800 Kkal</p>
+            <div class="menu-item__price"><span class="menu-item__total">2 510 <sup>руб.</sup></span>
+              <p class="menu-item__buttons">
+                <button class="menu-item__price-decrease">-</button>
+                <span class="menu-item__amount">1</span>
+                <button class="menu-item__price-increase">+</button>
+              </p>              
+            </div>
+            <button class="menu-item__button">В корзину</button>
+          </li>
+          <li class="menu-item__card swiper-slide">
+            <img src="img/set-8.jpg">
+            <p class="menu-item__name">Сет №8</p>
+            <p class="menu-item__quantity">24 шт. | 960 г. | 800 Kkal</p>
+            <div class="menu-item__price"><span class="menu-item__total">1 590 <sup>руб.</sup></span>
+              <p class="menu-item__buttons">
+                <button class="menu-item__price-decrease">-</button>
+                <span class="menu-item__amount">1</span>
+               <button class="menu-item__price-increase">+</button>
+              </p>            
+            </div>
+            <button class="menu-item__button">В корзину</button>
+          </li>
+          <li class="menu-item__card swiper-slide">
+            <img src="img/set-6.jpg">
+            <p class="menu-item__name">Сет №6</p>
+            <p class="menu-item__quantity">16 шт. | 460 г. | 490 Kkal</p>
+            <div class="menu-item__price"><span class="menu-item__total">400 <sup>руб.</sup></span>
+              <p class="menu-item__buttons">
+                <button class="menu-item__price-decrease">-</button>
+                <span class="menu-item__amount">1</span>
+                <button class="menu-item__price-increase">+</button>
+              </p>              
+            </div>
+            <button class="menu-item__button">В корзину</button>
+          </li>
+        </ul>
+      </section>
+      <section class="menu-item swiper-container">        
+        <h2 class="menu-item__title">Роллы</h2>
+        <ul class="menu-item__list swiper-wrapper">
+          <li class="menu-item__card swiper-slide slide">            
+            <img src="img/kunsei_batakon.jpg">
+            <p class="menu-item__name">Кунсей батакон</p>
+            <p class="menu-item__quantity">8 шт. | 250 г. | 350 Kkal</p>
+            <div class="menu-item__price"><span class="menu-item__total">260 <sup>руб.</sup></span>
+              <p class="menu-item__buttons">
+                <button class="menu-item__price-decrease">-</button>
+                <span class="menu-item__amount">1</span>
+                <button class="menu-item__price-increase">+</button>
+              </p>                            
+            </div>
+            <button class="menu-item__button">В корзину</button>          
+          </li>
+          <li class="menu-item__card swiper-slide">
+            <img src="img/unagi_diru.jpg">
+            <p class="menu-item__name">Унаги диру</p>            
+            <p class="menu-item__quantity">8 шт. | 960 г. | 800 Kkal</p>
+            <div class="menu-item__price"><span class="menu-item__total">280 <sup>руб.</sup> </span>
+              <p class="menu-item__buttons">
+                <button class="menu-item__price-decrease">-</button>
+                <span class="menu-item__amount">1</span>
+                <button class="menu-item__price-increase">+</button>
+              </p>              
+            </div>
+            <button class="menu-item__button">В корзину</button>
+          </li>
+          <li class="menu-item__card swiper-slide">
+            <img src="img/filadelfiya.jpg">
+            <p class="menu-item__name">Филадельфия</p>            
+            <p class="menu-item__quantity">8 шт. | 450 г. | 400 Kkal</p>
+            <div class="menu-item__price"><span class="menu-item__total">280 <sup>руб.</sup></span>
+              <p class="menu-item__buttons">
+                <button class="menu-item__price-decrease">-</button> 
+                <span class="menu-item__amount">1</span>
+                <button class="menu-item__price-increase">+</button>
+              </p>              
+            </div>
+            <button class="menu-item__button">В корзину</button>
+          </li>
+          <li class="menu-item__card swiper-slide">
+            <img src="img/mexica.jpg">
+            <p class="menu-item__name">Мексиканский</p>
+            <p class="menu-item__quantity">8 шт. | 460 г. | 490 Kkal</p>
+            <div class="menu-item__price"><span class="menu-item__total">290 <sup>руб.</sup></span>
+              <p class="menu-item__buttons">
+                <button class="menu-item__price-decrease">-</button>
+                <span class="menu-item__amount">1</span>
+               <button class="menu-item__price-increase">+</button>
+              </p>            
+            </div>
+            <button class="menu-item__button">В корзину</button>
+          </li>
+          <li class="menu-item__card swiper-slide">
+            <img src="img/sashimi.png">
+            <p class="menu-item__name">Сашими Макисузи</p>
+            <p class="menu-item__quantity">8 шт. | 400 г. | 400 Kkal</p>
+            <div class="menu-item__price"><span class="menu-item__total">250 <sup>руб.</sup></span>
+              <p class="menu-item__buttons">
+                <button class="menu-item__price-decrease">-</button>
+                <span class="menu-item__amount">1</span>
+                <button class="menu-item__price-increase">+</button>
+              </p>              
+            </div>
+            <button class="menu-item__button">В корзину</button>
+          </li>
+        </ul>
+      </section>
+      <section class="menu-item swiper-container">        
+        <h2 class="menu-item__title">Пицца</h2>
+        <ul class="menu-item__list swiper-wrapper">
+          <li class="menu-item__card swiper-slide slide">            
+            <img src="img/bavarskaya.jpg">
+            <p class="menu-item__name">Баварская</p>
+            <p class="menu-item__quantity">33 см | 680 г. | 1350 Kkal</p>
+            <div class="menu-item__price"><span class="menu-item__total">480 <sup>руб.</sup></span>
+              <p class="menu-item__buttons">
+                <button class="menu-item__price-decrease">-</button>
+                <span class="menu-item__amount">1</span>
+                <button class="menu-item__price-increase">+</button>
+              </p>                            
+            </div>
+            <button class="menu-item__button">В корзину</button>          
+          </li>
+          <li class="menu-item__card swiper-slide">
+            <img src="img/veganskaya.jpg">
+            <p class="menu-item__name">Вегетарианская</p>            
+            <p class="menu-item__quantity">33 см | 755 г. | 1800 Kkal</p>
+            <div class="menu-item__price"><span class="menu-item__total">450 <sup>руб.</sup> </span>
+              <p class="menu-item__buttons">
+                <button class="menu-item__price-decrease">-</button>
+                <span class="menu-item__amount">1</span>
+                <button class="menu-item__price-increase">+</button>
+              </p>              
+            </div>
+            <button class="menu-item__button">В корзину</button>
+          </li>
+          <li class="menu-item__card swiper-slide">
+            <img src="img/pepperoni.jpg">
+            <p class="menu-item__name">Пепперони</p>            
+            <p class="menu-item__quantity">33 см | 615 г. | 1400 Kkal</p>
+            <div class="menu-item__price"><span class="menu-item__total">450 <sup>руб.</sup></span>
+              <p class="menu-item__buttons">
+                <button class="menu-item__price-decrease">-</button>
+                <span class="menu-item__amount">1</span>
+                <button class="menu-item__price-increase">+</button>
+              </p>              
+            </div>
+            <button class="menu-item__button">В корзину</button>
+          </li>
+          <li class="menu-item__card swiper-slide">
+            <img src="img/classic.jpg">
+            <p class="menu-item__name">Классическая</p>
+            <p class="menu-item__quantity">33 см | 590 г. | 1490 Kkal</p>
+            <div class="menu-item__price"><span class="menu-item__total">390 <sup>руб.</sup></span>
+              <p class="menu-item__buttons">
+                <button class="menu-item__price-decrease">-</button>
+                <span class="menu-item__amount">1</span>
+               <button class="menu-item__price-increase">+</button>
+              </p>            
+            </div>
+            <button class="menu-item__button">В корзину</button>
+          </li>
+          <li class="menu-item__card swiper-slide">
+            <img src="img/assorty.jpg">
+            <p class="menu-item__name">Ассорти</p>
+            <p class="menu-item__quantity">33 см | 650 г. | 1420 Kkal</p>
+            <div class="menu-item__price"><span class="menu-item__total">450 <sup>руб.</sup></span>
+              <p class="menu-item__buttons">
+                <button class="menu-item__price-decrease">-</button>
+                <span class="menu-item__amount">1</span>
+                <button class="menu-item__price-increase">+</button>
+              </p>              
+            </div>
+            <button class="menu-item__button">В корзину</button>
+          </li>
+        </ul>
+      </section>
+      <section class="menu-item swiper-container">        
+        <h2 class="menu-item__title">WOK</h2>
+        <ul class="menu-item__list swiper-wrapper">
+          <li class="menu-item__card swiper-slide slide">            
+            <img src="img/chicken.jpg">
+            <p class="menu-item__name">С курицей</p>
+            <p class="menu-item__quantity">33 см | 680 г. | 1350 Kkal</p>
+            <div class="menu-item__price"><span class="menu-item__total">480 <sup>руб.</sup></span>
+              <p class="menu-item__buttons">
+                <button class="menu-item__price-decrease">-</button>
+                <span class="menu-item__amount">1</span>
+                <button class="menu-item__price-increase">+</button>
+              </p>                            
+            </div>
+            <button class="menu-item__button">В корзину</button>          
+          </li>
+          <li class="menu-item__card swiper-slide">
+            <img src="img/beef.jpg">
+            <p class="menu-item__name">С говядиной</p>            
+            <p class="menu-item__quantity">33 см | 755 г. | 1800 Kkal</p>
+            <div class="menu-item__price"><span class="menu-item__total">450 <sup>руб.</sup> </span>
+              <p class="menu-item__buttons">
+                <button class="menu-item__price-decrease">-</button>
+                <span class="menu-item__amount">1</span>
+                <button class="menu-item__price-increase">+</button>
+              </p>              
+            </div>
+            <button class="menu-item__button">В корзину</button>
+          </li>
+          <li class="menu-item__card swiper-slide">
+            <img src="img/vegetables.jpg">
+            <p class="menu-item__name">С овощами</p>            
+            <p class="menu-item__quantity">33 см | 615 г. | 1400 Kkal</p>
+            <div class="menu-item__price"><span class="menu-item__total">450 <sup>руб.</sup></span>
+              <p class="menu-item__buttons">
+                <button class="menu-item__price-decrease">-</button>
+                <span class="menu-item__amount">1</span>
+                <button class="menu-item__price-increase">+</button>
+              </p>              
+            </div>
+            <button class="menu-item__button">В корзину</button>
+          </li>
+          <li class="menu-item__card swiper-slide">
+            <img src="img/seafood.jpg">
+            <p class="menu-item__name">С морепродуктами</p>
+            <p class="menu-item__quantity">33 см | 590 г. | 1490 Kkal</p>
+            <div class="menu-item__price"><span class="menu-item__total">390 <sup>руб.</sup></span>
+              <p class="menu-item__buttons">
+                <button class="menu-item__price-decrease">-</button>
+                <span class="menu-item__amount">1</span>
+               <button class="menu-item__price-increase">+</button>
+              </p>            
+            </div>
+            <button class="menu-item__button">В корзину</button>
+          </li>
+          <li class="menu-item__card swiper-slide">
+            <img class="menu-item__img-wok"  src="img/chicken.jpg">
+            <p class="menu-item__name">Острый с курицей</p>
+            <p class="menu-item__quantity">33 см | 650 г. | 1420 Kkal</p>
+            <div class="menu-item__price"><span class="menu-item__total">450 <sup>руб.</sup></span>
+              <p class="menu-item__buttons">
+                <button class="menu-item__price-decrease">-</button>
+                <span class="menu-item__amount">1</span>
+                <button class="menu-item__price-increase">+</button>
+              </p>              
+            </div>
+            <button class="menu-item__button">В корзину</button>
+          </li>
+        </ul>
+      </section>
+      
     </main>
-    <!--footer.html-->
-    <%= _.template(require('../includes/footer.html').default)({}) %>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <script src="js/script.js"></script>
   </body>
 </html>

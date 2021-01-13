@@ -1,10 +1,27 @@
 /* Добавьте сюда все @font-face, которые будут использоваться в проекте  */
 
 @font-face {
-  font-family: "Roboto";
-  src: url("../fonts/Roboto-Regular.woff2") format("woff2"),
-    url("../fonts/Roboto-Regular.woff") format("woff");
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lemon Tuesday";
+  src: url("../fonts/lemon-tuesday.woff2") format("woff2"),
+    url("../fonts/lemon-tuesday.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("../fonts/RobotoSlab-Bold.woff2") format("woff2"),
+    url("../fonts/RobotoSlab-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: bold;
   font-display: swap;
 }

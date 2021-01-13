@@ -1,0 +1,112 @@
+.special-offers {
+    width: 320px;
+    margin: 0 auto;
+    background-color: $white;
+    
+    outline: 1px green dotted;
+
+
+    &__list {        
+        margin: 0;        
+        padding: 0;
+        margin-bottom: 17px; 
+        list-style-type: none;
+        outline: 1px blue dotted;
+    }
+    &__item {        
+        height: 242px;
+       
+    }
+    &__item img {
+        position: relative;
+        width: 688px;
+        height: 242px;
+        object-fit: none;    
+        object-position: 32% 100%;
+       
+    }
+    &__title{
+        position: absolute;
+        top: 15px;
+        left: 14px;
+        z-index: 5;
+        margin: 0;
+        width: 227px;
+        height: 128px;
+        font-size: 49px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: normal;        
+        color: #84c604;
+        
+    }
+    &__title::after {
+        position: absolute;
+        content: "с 11:00 до 16:00 в будние дни";
+        top: 160px;
+        left: 0;        
+        width: 168px;
+        height: 13px;
+        color: #ffffff;
+        font-family: "Roboto";
+        font-size: 12px;
+        font-style: italic;
+        letter-spacing: normal;
+        line-height: normal;
+        
+    }
+    &__title::before {
+        position: absolute;
+        top: 70px;
+        left: 220px;
+        content: "";
+        width: 67px;
+        height: 67px;
+        border-radius: 50%;            
+        background-image: linear-gradient(to top, #b71f24 0%, #df2024 100%);
+        position: absolute;
+        top: 70px;
+        left: 220px;
+    }
+    &__text {             
+        position: absolute;
+        top: 95px;
+        left: 238px;
+        z-index: 5;   
+        width: 59px;        
+        text-transform: uppercase;
+        color: #ffffff;
+        font-family: "Roboto";
+        font-size: 13px;
+        font-weight: 700;
+        text-align: center;        
+        line-height: normal;
+        
+    }
+    &__toggles {
+        height: 13px;        
+        margin-bottom: 45px;        
+    }
+
+    
+
+    
+    
+}
+// меняю вид пагинации, прописанный в стилях Свайпера//
+.swiper-pagination-bullet {
+    width: 13px;
+    height: 13px;    
+    background-color:#1fba0a;   
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 10px;    
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    position: relative;
+    top: 0;
+    bottom: 0;
+}

@@ -5,7 +5,8 @@
 @import "global";
 
 @import "blocks/visually-hidden";
-@import "blocks/container";
-@import "blocks/header";
-@import "blocks/nav";
-@import "blocks/logo";
+
+@import "blocks/page-header";
+@import "blocks/user-nav";
+@import "blocks/special-offers";
+@import "blocks/menu-item";
