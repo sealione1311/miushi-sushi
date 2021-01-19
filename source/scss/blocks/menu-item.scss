@@ -112,6 +112,35 @@
         border-width: 1px;
     } 
 
+    &__topping-buttons {
+        margin-left: 16px;
+        font-family: $second-font;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    &__topping-buttons input {        
+        width: 40px;
+        height: 20px;
+        background-color: #f2f2f2;
+        border-radius: 3px;
+        border: none;
+    }
+
+    &__topping {
+        margin-left: 16px;
+        font-family: $second-font;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    &__topping select {
+        width: 193px;
+        height: 25px;
+        background-color: #f2f2f2;
+        border-radius: 3px
+    }
+
 
     &__amount {
         margin-right: 10px;
