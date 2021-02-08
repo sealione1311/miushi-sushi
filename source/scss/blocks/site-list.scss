@@ -1,0 +1,21 @@
+.site-list {
+    
+    width: 320px;
+    display: flex;
+    flex-direction: column;    
+    font-family: $second-font;
+    font-weight: bold;
+    
+  }
+  
+  .site-list a {
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;    
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-top: 1px solid #886e5b;
+    border-bottom: 1px solid #71543f;
+  }

@@ -1,0 +1,45 @@
+.main-nav {
+    position: relative;
+    width: 320px;      
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+
+    &__toggle { 
+        margin: 0;
+        padding: 0;
+        width: 20px;
+        height: 17px;
+        border: none;
+        background: url("../../img/burger.svg") no-repeat;
+        margin-left: 15px;
+        cursor: pointer;
+    }   
+
+    &__list {
+        width: 65px;        
+        padding: 0;
+        display: flex;        
+        justify-content: space-between;              
+        list-style-type: none;        
+    }
+    
+    &__item {        
+        width: 22px;
+        height: 22px;   
+        margin: 0;
+        padding: 0;                  
+    }  
+    
+    &__wrapper {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 200;
+        transform: translateY(-100%);
+    }
+    
+}
+
+
