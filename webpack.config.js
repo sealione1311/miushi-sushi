@@ -127,39 +127,5 @@ module.exports = {
       optimizationLevel: 3,
       progressive: true,
     }),
-    new ImageminWebpWebpackPlugin({
-      config: [
-        {
-          test: /\.(jpe?g|png)/,
-          options: {
-            quality: 85,
-          },
-        },
-      ],
-      overrideExtension: true,
-      detailedLogs: false,
-      silent: false,
-      strict: true,
-    }),
-  ].concat(htmlPlugins),
-  output: {
-    filename: 'js/[name].js',
-    path: path.resolve(__dirname, 'build'),
-  },
-  optimization: {
-    minimize: true,
-    splitChunks: {
-      chunks: 'all',
-    },
-    minimizer: isProd
-      ? [
-          new TerserPlugin({
-            cache: true,
-            parallel: true,
-            sourceMap: false,
-          }),
-          new OptimizeCSSAssetsPlugin({}),
-        ]
-      : [],
-  },
+  ],    
 };

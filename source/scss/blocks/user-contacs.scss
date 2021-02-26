@@ -1,0 +1,75 @@
+.user-contacts {
+    width: 320px;
+    height: 518px;
+    padding-left: 17px;
+    background-image: url('../../img/user_contacts_bg_mobile.jpg');
+
+    &__title {
+        margin: 0;
+        margin-bottom: 39px;
+        padding-top: 69px;        
+        text-align: left;
+        line-height: 1.2;
+        font-weight: 400;
+        font-size: 44px;
+        color: #ffffff;
+        position: relative;
+    }
+
+    &__title::before {
+        content: "Есть вопросы?";
+        position: absolute;
+        top: 33px;        
+        font-family: $second-font;
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 400;        
+    }
+    & input {        
+        width: 288px;
+        height: 38px;
+        padding-left: 5px;
+        background-color: rgba(255,255,255,0.14);
+        font-family: $second-font;
+        border: none;
+        border-bottom: white 1px solid;
+    }  
+    
+    & input:first-child{
+        margin-bottom: 20px;
+    }
+
+    & input[type="tel"] {
+        margin-bottom: 40px;
+    }
+
+    &__button {
+        width: 289px;
+        height: 48px;
+        margin-bottom: 117px;
+        background-color: #fd4f10;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;        
+        color: #ffffff;
+        line-height: 1.2;        
+        font-family: $second-font;
+        position: relative;
+    }
+
+    &__button::after {
+        width: 270px;        
+        text-align: left;
+        content: "Нажимая на кнопку «Отправить», вы даете согласие на обработку своих персональных данных.";
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        opacity: 0.7;        
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 400;
+        color: #ffffff;
+        text-transform: none;
+    }
+}

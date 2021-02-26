@@ -1,0 +1,94 @@
+.reasons {   
+
+    &__title {
+        padding: 0 39px;               
+        margin-bottom: 116px;
+        text-align: center; 
+        line-height: 1.2;
+        font-weight: 400;
+        color: #32505a;
+        font-size: 43px;        
+    }
+
+    &__list {
+        padding: 0 71px;
+        list-style: none;
+        font-family: $second-font;
+        line-height: 28px;
+        font-weight: 400;
+        color: #4d4d4d;              
+        font-size: 16px;
+    }
+
+    &__item {
+        margin-bottom: 130px;
+        position: relative;
+        text-align: center;
+    }
+
+    &__item--last {
+        margin-bottom: 69px;
+    }
+
+    &__item::before {
+        content: "";
+        width: 64px;
+        height: 65px;
+        position: absolute;
+        top: -70px;
+        left: 50%;    
+        transform: translateX(-50%);        
+    }
+
+    &__item--hand-made::before {
+        background: url(../../img/hand_made.svg) no-repeat;   
+    }
+
+    &__item--rice::before {
+        background: url(../../img/rice.svg) no-repeat;   
+    }
+
+    &__item--pizza::before {
+        background: url(../../img/pizza.svg) no-repeat;   
+    }
+
+    &__item--fresh-ingridients::before {
+        background: url(../../img/octopus.svg) no-repeat;   
+    }
+
+    &__item--filing::before {
+        background: url(../../img/fresh_ingridients.svg) no-repeat;   
+    }
+
+    &__item--quality::before {
+        background: url(../../img/like.svg) no-repeat;   
+    }
+
+    &__item--low-price::before {
+        background: url(../../img/money.svg) no-repeat;   
+    }
+
+    &__item--cucumber::before {
+        background: url(../../img/knife.svg) no-repeat;   
+    }
+
+    &__item--fresh-fish::before {
+        background: url(../../img/fish.svg) no-repeat;   
+    }
+
+    &__item--no-mayonnaise::before {
+        background: url(../../img/without_mayonnaise.svg) no-repeat;  
+    }
+
+    &__item--hidden {
+        display: none;
+    }
+
+    &__item--show {
+        display: block;
+    }
+
+    &__button {        
+        margin-bottom: 70px;
+    }
+}

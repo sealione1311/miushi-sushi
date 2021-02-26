@@ -1,0 +1,39 @@
+.main-footer {
+    width: 320px;
+    margin: 0 auto;
+    background-color: #1a2d34;
+    &__list {
+        list-style: none;
+        text-align: left;
+        font-family: $second-font;
+        line-height: 20px;
+        color: #fff;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    &__social {
+        list-style: none;
+    }
+
+    &__link {
+        font-family: $second-font;        
+        line-height: 1.2;
+        font-weight: 400;
+        text-decoration: underline;
+        color: #6b96a5;
+        font-size: 12px;
+    }
+
+    &__copyright {
+        text-align: center;
+        font-family: $second-font;
+        line-height: 1.2;
+        font-weight: 400;
+        color: #6b96a5;
+        font-size: 12px;
+
+    }
+
+
+}

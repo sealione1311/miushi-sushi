@@ -1,0 +1,46 @@
+.about-company {
+    padding-top: 44px;
+    padding-left: 15px;
+    font-family: $second-font;
+    
+    &__title {
+        margin-bottom: 52px;
+        font-size: 44px;
+        line-height: 28px;
+        font-weight: 400;
+        color: #32505a;
+        text-align: center; 
+        font-family: $main-font;
+    }
+
+    &__subtitle {
+        margin-bottom: 37px;
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #32505a;
+      
+    }
+
+    &__text {       
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #4d4d4d;
+                
+    }
+
+    &__text--last {
+        margin-bottom: 31px;
+
+    }
+
+    &__text--hidden {
+        display: none;
+        
+    }
+
+    &__btn {
+        margin-bottom: 71px;
+    }
+}
